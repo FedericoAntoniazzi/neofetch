@@ -138,9 +138,9 @@ distro_shorthand="off"
 # off: 'Arch Linux'
 os_arch="on"
 
-# Show btw in case you use Arch Linux
+# Show Arch Linux btw
 #
-# Default: 'off'
+# Default: 'on'
 # Values:  'on', 'off'
 # Flag:    '--i-use-arch-btw'
 # Short:   '--btw'
@@ -148,7 +148,7 @@ os_arch="on"
 # Example:
 # on: 'Arch Linux btw x86_64'
 # off: 'Arch Linux x86_64'
-i_use_arch_btw="off"
+i_use_arch_btw="on"
 
 
 # Uptime
