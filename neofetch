@@ -1046,10 +1046,6 @@ get_distro() {
                     off)  distro="${PRETTY_NAME:-${DISTRIB_DESCRIPTION}} ${UBUNTU_CODENAME}" ;;
                 esac
 
-                if [[ "$distro" == "Arch Linux"* && "$i_use_arch_btw" != "off" ]]; then
-                    distro="$distro btw"
-                fi
-
             elif [[ -f /etc/GoboLinuxVersion ]]; then
                 case $distro_shorthand in
                     on|tiny) distro=GoboLinux ;;
@@ -1136,6 +1132,10 @@ get_distro() {
 
             distro=$(trim_quotes "$distro")
             distro=${distro/NAME=}
+
+            if [[ "$distro" == "Arch Linux"* && "$i_use_arch_btw" != "off" ]]; then
+                distro="$distro btw"
+            fi
 
             # Get Ubuntu flavor.
             if [[ $distro == "Ubuntu"* ]]; then
